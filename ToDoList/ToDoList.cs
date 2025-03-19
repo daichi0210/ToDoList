@@ -22,5 +22,11 @@ namespace ToDoList
             Addition a = new Addition();
             a.ShowDialog();
         }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            Settings s = new Settings();
+            s.ShowDialog();
+        }
     }
 }

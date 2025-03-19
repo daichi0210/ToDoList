@@ -16,3 +16,4 @@ D:\dev\windows\src\repos\ToDoList\ToDoList\obj\Debug\net8.0-windows\refint\ToDoL
 D:\dev\windows\src\repos\ToDoList\ToDoList\obj\Debug\net8.0-windows\ToDoList.pdb
 D:\dev\windows\src\repos\ToDoList\ToDoList\obj\Debug\net8.0-windows\ToDoList.genruntimeconfig.cache
 D:\dev\windows\src\repos\ToDoList\ToDoList\obj\Debug\net8.0-windows\ref\ToDoList.dll
+D:\dev\windows\src\repos\ToDoList\ToDoList\obj\Debug\net8.0-windows\ToDoList.Settings.resources
