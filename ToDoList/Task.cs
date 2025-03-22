@@ -11,86 +11,68 @@ namespace ToDoList
     {
         private static Dictionary<string, string> _column = new Dictionary<string, string>()
         {
-            {"Task", "TEXT"},   // タスク名
-            {"Task", "TEXT"},   // カテゴリ
-
-
-            {"FirstName", "TEXT"},// 名
-            {"LastNameKana", "TEXT"},// セイ
-            {"FirstNameKana", "TEXT"},// メイ
-            {"Address", "TEXT"},// 住所
-            {"Tel", "TEXT"},// 固定電話番号
-            {"MobileNumber", "TEXT"},// 携帯電話番号
-            {"BusStop", "TEXT"},// バス停
-            {"Remarks", "TEXT" }// 備考
+            {"TaskName", "TEXT"},               // タスク名
+            {"Category", "TEXT"},               // カテゴリ
+            {"Deadline", "TEXT"},               // 期限
+            {"Priority", "TEXT"},               // 優先度
+            {"ScheduledExecutionDate", "TEXT"}, // 実行予定日
+            {"ScheduledExecutionTime", "TEXT"}, // 実行予定時刻
+            {"Remarks", "TEXT"},                // 備考
         };
 
-        private string _lastName;       // 姓
-        private string _firstName;      // 名
-        private string _lastNameKana;   // 姓（カナ）
-        private string _firstNameKana;  // 名（カナ）
-        private string _address;        // 住所
-        private string _tel;            // 電話番号（固定電話）
-        private string _mobileNumber;   // 電話番号（携帯電話）
-        private string _busStop;        // 乗車バス停
-        private string _remarks;        // 備考
+        private string _taskName;               // タスク名
+        private string _category;               // カテゴリ
+        private string _deadline;               // 期限
+        private string _priority;               // 優先度
+        private string _scheduledExecutionDate; // 実行予定日
+        private string _scheduledExecutionTime; // 実行予定時刻
+        private string _remarks;                // 備考
 
         public Task()
         {
-            var t = typeof(User);
+            var t = typeof(Task);
             foreach (var f in t.GetFields())
             {
                 var n = f.Name;
                 var v = f.GetValue(t);
                 MessageBox.Show(string.Format("フィールド名：{0}, 値：{1}", n, v));
             }
-
-
         }
 
         public Dictionary<string, string> Column
         {
             get { return _column; }
         }
-        public string LastName
+
+        public string TaskName
         {
-            get { return _lastName; }
-            set { _lastName = value; }
+            get { return _taskName; }
+            set { _taskName = value; }
         }
-        public string FirstName
+        public string Category
         {
-            get { return _firstName; }
-            set { _firstName = value; }
+            get { return _category; }
+            set { _category = value; }
         }
-        public string LastNameKana
+        public string Deadline
         {
-            get { return _lastNameKana; }
-            set { _lastNameKana = value; }
+            get { return _deadline; }
+            set { _deadline = value; }
         }
-        public string FirstNameKana
+        public string Priority
         {
-            get { return _firstNameKana; }
-            set { _firstNameKana = value; }
+            get { return _priority; }
+            set { _priority = value; }
         }
-        public string Address
+        public string ScheduledExecutionDate
         {
-            get { return _address; }
-            set { _address = value; }
+            get { return _scheduledExecutionDate; }
+            set { _scheduledExecutionDate = value; }
         }
-        public string Tel
+        public string ScheduledExecutionTime
         {
-            get { return _tel; }
-            set { _tel = value; }
-        }
-        public string MobileNumber
-        {
-            get { return _mobileNumber; }
-            set { _mobileNumber = value; }
-        }
-        public string BusStop
-        {
-            get { return _busStop; }
-            set { _busStop = value; }
+            get { return _scheduledExecutionTime; }
+            set { _scheduledExecutionTime = value; }
         }
         public string Remarks
         {

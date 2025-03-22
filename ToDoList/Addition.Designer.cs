@@ -49,7 +49,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 44);
+            label1.Location = new Point(12, 15);
             label1.Name = "label1";
             label1.Size = new Size(46, 15);
             label1.TabIndex = 0;
@@ -57,7 +57,7 @@
             // 
             // textBoxTaskName
             // 
-            textBoxTaskName.Location = new Point(97, 41);
+            textBoxTaskName.Location = new Point(97, 12);
             textBoxTaskName.Name = "textBoxTaskName";
             textBoxTaskName.Size = new Size(170, 23);
             textBoxTaskName.TabIndex = 1;
@@ -65,7 +65,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(12, 15);
+            label2.Location = new Point(12, 44);
             label2.Name = "label2";
             label2.Size = new Size(42, 15);
             label2.TabIndex = 0;
@@ -84,7 +84,7 @@
             // 
             comboBoxCategory.FormattingEnabled = true;
             comboBoxCategory.Items.AddRange(new object[] { "公民館", "教育事業", "外出", "研修", "市民憲章", "自治連", "まちづくり", "駐連協", "安推協" });
-            comboBoxCategory.Location = new Point(97, 12);
+            comboBoxCategory.Location = new Point(97, 41);
             comboBoxCategory.Name = "comboBoxCategory";
             comboBoxCategory.Size = new Size(90, 23);
             comboBoxCategory.TabIndex = 2;
