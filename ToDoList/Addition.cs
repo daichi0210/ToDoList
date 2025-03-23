@@ -10,22 +10,34 @@ using System.Windows.Forms;
 
 namespace ToDoList
 {
-    public partial class Addition: Form
+    public partial class Addition : Form
     {
         public Addition()
         {
             InitializeComponent();
+        }
 
-            comboBoxCategory.Items.Add("教育事業");
-            comboBoxCategory.Items.Add("公民館");
-            comboBoxCategory.Items.Add("自治連");
-            comboBoxCategory.Items.Add("安推協");
-            comboBoxCategory.Items.Add("駐連協");
-            comboBoxCategory.Items.Add("その他");
+        private void buttonRegistration_Click(object sender, EventArgs e)
+        {
+            Task t = new Task();
 
+            t.TaskName = textBoxTaskName.Text;          // タスク名
+            t.Category = comboBoxCategory.Text;         // カテゴリ
+            t.Deadline = dateTimePickerDeadline.Text;   // 期限
+            t.Priority = comboBoxPriority.Text;         // 優先度
+            t.ScheduledExecutionDate = dateTimePickerScheduledExecutionDate.Text;   // 実行予定日
+            t.ScheduledExecutionTime = dateTimePickerScheduledExecutionTime.Text;   // 実行予定時刻
+            t.Remarks = textBoxRemarks.Text;            // 備考
+            
+            SQLiteTaskList stl = new SQLiteTaskList();
+            stl.Insert(t);
 
+            this.Close();
+        }
 
-
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

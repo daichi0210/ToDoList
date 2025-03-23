@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             buttonAddition = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewTaskList = new DataGridView();
             buttonSettings = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTaskList).BeginInit();
             SuspendLayout();
             // 
             // buttonAddition
@@ -44,13 +44,13 @@
             buttonAddition.UseVisualStyleBackColor = true;
             buttonAddition.Click += buttonAddition_Click;
             // 
-            // dataGridView1
+            // dataGridViewTaskList
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 54);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(776, 324);
-            dataGridView1.TabIndex = 1;
+            dataGridViewTaskList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewTaskList.Location = new Point(12, 54);
+            dataGridViewTaskList.Name = "dataGridViewTaskList";
+            dataGridViewTaskList.Size = new Size(776, 324);
+            dataGridViewTaskList.TabIndex = 1;
             // 
             // buttonSettings
             // 
@@ -67,19 +67,19 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewTaskList);
             Controls.Add(buttonSettings);
             Controls.Add(buttonAddition);
             Name = "ToDoList";
             Text = "ToDoList";
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewTaskList).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Button buttonAddition;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewTaskList;
         private Button buttonSettings;
     }
 }

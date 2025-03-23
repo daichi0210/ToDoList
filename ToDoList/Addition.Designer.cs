@@ -34,8 +34,8 @@
             label3 = new Label();
             comboBoxCategory = new ComboBox();
             label5 = new Label();
-            button1 = new Button();
-            button2 = new Button();
+            buttonRegistration = new Button();
+            buttonCancel = new Button();
             textBoxRemarks = new TextBox();
             dateTimePickerDeadline = new DateTimePicker();
             label4 = new Label();
@@ -98,23 +98,25 @@
             label5.TabIndex = 0;
             label5.Text = "備考";
             // 
-            // button1
+            // buttonRegistration
             // 
-            button1.Location = new Point(97, 215);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 10;
-            button1.Text = "登録";
-            button1.UseVisualStyleBackColor = true;
+            buttonRegistration.Location = new Point(97, 215);
+            buttonRegistration.Name = "buttonRegistration";
+            buttonRegistration.Size = new Size(75, 23);
+            buttonRegistration.TabIndex = 10;
+            buttonRegistration.Text = "登録";
+            buttonRegistration.UseVisualStyleBackColor = true;
+            buttonRegistration.Click += buttonRegistration_Click;
             // 
-            // button2
+            // buttonCancel
             // 
-            button2.Location = new Point(192, 215);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 11;
-            button2.Text = "キャンセル";
-            button2.UseVisualStyleBackColor = true;
+            buttonCancel.Location = new Point(192, 215);
+            buttonCancel.Name = "buttonCancel";
+            buttonCancel.Size = new Size(75, 23);
+            buttonCancel.TabIndex = 11;
+            buttonCancel.Text = "キャンセル";
+            buttonCancel.UseVisualStyleBackColor = true;
+            buttonCancel.Click += buttonCancel_Click;
             // 
             // textBoxRemarks
             // 
@@ -190,8 +192,8 @@
             Controls.Add(dateTimePickerScheduledExecutionTime);
             Controls.Add(dateTimePickerScheduledExecutionDate);
             Controls.Add(dateTimePickerDeadline);
-            Controls.Add(button2);
-            Controls.Add(button1);
+            Controls.Add(buttonCancel);
+            Controls.Add(buttonRegistration);
             Controls.Add(comboBoxPriority);
             Controls.Add(comboBoxCategory);
             Controls.Add(textBoxRemarks);
@@ -217,8 +219,8 @@
         private Label label3;
         private ComboBox comboBoxCategory;
         private Label label5;
-        private Button button1;
-        private Button button2;
+        private Button buttonRegistration;
+        private Button buttonCancel;
         private TextBox textBoxRemarks;
         private DateTimePicker dateTimePickerDeadline;
         private Label label4;

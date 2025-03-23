@@ -3,23 +3,11 @@
   "WorkspaceRootPath": "D:\\dev\\windows\\src\\repos\\ToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|D:\\dev\\windows\\src\\repos\\ToDoList\\todolist\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -27,8 +15,16 @@
       "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\sqlitetasklist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|D:\\dev\\windows\\src\\repos\\ToDoList\\todolist\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\settings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -37,87 +33,12 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "DockedWidth": 94,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Task.cs",
-              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Task.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Task.cs",
-              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Task.cs",
-              "RelativeToolTip": "ToDoList\\Task.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T12:39:33.401Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "SQLiteTaskList.cs",
-              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\SQLiteTaskList.cs",
-              "RelativeDocumentMoniker": "ToDoList\\SQLiteTaskList.cs",
-              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\SQLiteTaskList.cs",
-              "RelativeToolTip": "ToDoList\\SQLiteTaskList.cs",
-              "ViewState": "AgIAAK8AAAAAAAAAAADwv74AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-20T12:33:26.361Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Settings.cs [\u30C7\u30B6\u30A4\u30F3]",
-              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Settings.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Settings.cs",
-              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Settings.cs [\u30C7\u30B6\u30A4\u30F3]",
-              "RelativeToolTip": "ToDoList\\Settings.cs [\u30C7\u30B6\u30A4\u30F3]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T13:02:16.81Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ToDoList.cs",
-              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs",
-              "RelativeDocumentMoniker": "ToDoList\\ToDoList.cs",
-              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs",
-              "RelativeToolTip": "ToDoList\\ToDoList.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAnwBYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T12:28:10.429Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ToDoList.cs [\u30C7\u30B6\u30A4\u30F3]",
-              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs",
-              "RelativeDocumentMoniker": "ToDoList\\ToDoList.cs",
-              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs [\u30C7\u30B6\u30A4\u30F3]",
-              "RelativeToolTip": "ToDoList\\ToDoList.cs [\u30C7\u30B6\u30A4\u30F3]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T12:27:54.734Z",
-              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Addition.cs",
-              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Addition.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Addition.cs",
-              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Addition.cs",
-              "RelativeToolTip": "ToDoList\\Addition.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAnwBkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T12:20:30.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "Addition.cs [\u30C7\u30B6\u30A4\u30F3]",
               "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Addition.cs",
               "RelativeDocumentMoniker": "ToDoList\\Addition.cs",
@@ -126,6 +47,76 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T12:14:21.688Z",
               "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 306,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SQLiteTaskList.cs",
+              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\SQLiteTaskList.cs",
+              "RelativeDocumentMoniker": "ToDoList\\SQLiteTaskList.cs",
+              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\SQLiteTaskList.cs",
+              "RelativeToolTip": "ToDoList\\SQLiteTaskList.cs",
+              "ViewState": "AgIAANIAAAAAAAAAAAAEwNwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:26:38.214Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ToDoList.cs",
+              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs",
+              "RelativeDocumentMoniker": "ToDoList\\ToDoList.cs",
+              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs",
+              "RelativeToolTip": "ToDoList\\ToDoList.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwCcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:26:45.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ToDoList.cs [\u30C7\u30B6\u30A4\u30F3]",
+              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs",
+              "RelativeDocumentMoniker": "ToDoList\\ToDoList.cs",
+              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs [\u30C7\u30B6\u30A4\u30F3]",
+              "RelativeToolTip": "ToDoList\\ToDoList.cs [\u30C7\u30B6\u30A4\u30F3]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:26:43.544Z",
+              "EditorCaption": " [\u30C7\u30B6\u30A4\u30F3]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Task.cs",
+              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Task.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Task.cs",
+              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Task.cs",
+              "RelativeToolTip": "ToDoList\\Task.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-22T13:05:29.821Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Addition.cs",
+              "DocumentMoniker": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Addition.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Addition.cs",
+              "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Addition.cs",
+              "RelativeToolTip": "ToDoList\\Addition.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAArwCAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-23T12:21:40.244Z",
+              "EditorCaption": ""
             }
           ]
         }

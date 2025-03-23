@@ -16,7 +16,7 @@ namespace ToDoList
         // データベースのファイル名
         private string _databaseFileName = "TaskList.db";
         // テーブル名
-        private string _tableName = "user_list";
+        private string _tableName = "task_list";
         // データベースファイルへの接続文字列
         private string _connection;
 
@@ -85,7 +85,7 @@ namespace ToDoList
             query += ") VALUES (";
             foreach (var v in t.Column.Select((Entry, Index) => new { Entry, Index }))
             {
-                PropertyInfo pi = typeof(User).GetProperty(v.Entry.Key);
+                PropertyInfo pi = typeof(Task).GetProperty(v.Entry.Key);
                 object value = pi.GetValue(t);
                 query += "'" + value + "'";
 
@@ -109,7 +109,7 @@ namespace ToDoList
             {
                 query += v.Entry.Key + " = ";
 
-                PropertyInfo pi = typeof(User).GetProperty(v.Entry.Key);
+                PropertyInfo pi = typeof(Task).GetProperty(v.Entry.Key);
                 object value = pi.GetValue(t);
                 query += "'" + value + "'";
 
@@ -176,7 +176,9 @@ namespace ToDoList
             return dt;
         }
 
+
         // 指定したIdのデータを取得する
+        /*
         public DataTable getUserData(int targetId)
         {
             // クエリを作成
@@ -187,8 +189,9 @@ namespace ToDoList
 
             return dt;
         }
+        */
 
-        //★★★
+        /*
         public Dictionary<int, string> getUserInfo()
         {
             // テーブルがなければ作成する
@@ -223,5 +226,6 @@ namespace ToDoList
                 return userInfo;
             }
         }
+        */
     }
 }
