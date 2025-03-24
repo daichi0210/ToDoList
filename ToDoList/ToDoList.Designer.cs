@@ -71,6 +71,7 @@
             Controls.Add(buttonSettings);
             Controls.Add(buttonAddition);
             Name = "ToDoList";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "ToDoList";
             ((System.ComponentModel.ISupportInitialize)dataGridViewTaskList).EndInit();
             ResumeLayout(false);

@@ -206,6 +206,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "Addition";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Addition";
             ResumeLayout(false);
             PerformLayout();

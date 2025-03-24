@@ -49,6 +49,7 @@
             ClientSize = new Size(800, 450);
             Controls.Add(listBox1);
             Name = "Settings";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "Settings";
             ResumeLayout(false);
         }
