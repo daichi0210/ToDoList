@@ -36,7 +36,8 @@
             // 
             // buttonAddition
             // 
-            buttonAddition.Location = new Point(687, 415);
+            buttonAddition.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonAddition.Location = new Point(632, 415);
             buttonAddition.Name = "buttonAddition";
             buttonAddition.Size = new Size(75, 23);
             buttonAddition.TabIndex = 0;
@@ -46,15 +47,17 @@
             // 
             // dataGridViewTaskList
             // 
+            dataGridViewTaskList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewTaskList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewTaskList.Location = new Point(12, 54);
+            dataGridViewTaskList.Location = new Point(12, 12);
             dataGridViewTaskList.Name = "dataGridViewTaskList";
-            dataGridViewTaskList.Size = new Size(776, 324);
+            dataGridViewTaskList.Size = new Size(776, 397);
             dataGridViewTaskList.TabIndex = 1;
             // 
             // buttonSettings
             // 
-            buttonSettings.Location = new Point(513, 415);
+            buttonSettings.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonSettings.Location = new Point(713, 415);
             buttonSettings.Name = "buttonSettings";
             buttonSettings.Size = new Size(75, 23);
             buttonSettings.TabIndex = 0;
