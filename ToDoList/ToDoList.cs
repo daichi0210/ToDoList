@@ -35,27 +35,8 @@ namespace ToDoList
 
         public void LoadTaskList()
         {
-            //checkedListBoxUserSelection.Items.Clear();
-            //dataGridViewTaskList.EndEdit();
-            //★エラー
-            dataGridViewTaskList.Rows.Clear();
-
             SQLiteTaskList stl = new SQLiteTaskList();
             dataGridViewTaskList.DataSource = stl.LoadTable();
-
-
-            // IdとNameを辞書で管理
-            /*
-            var userInfo = new Dictionary<int, string>();
-            userInfo = uld.getUserInfo();
-            */
-
-            /*
-            foreach (string name in userInfo.Values)
-            {
-                checkedListBoxUserSelection.Items.Add(name);
-            }
-            */
         }
     }
 }
