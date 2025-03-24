@@ -53,6 +53,7 @@
             dataGridViewTaskList.Name = "dataGridViewTaskList";
             dataGridViewTaskList.Size = new Size(776, 397);
             dataGridViewTaskList.TabIndex = 1;
+            dataGridViewTaskList.CellValueChanged += dataGridViewTaskList_CellValueChanged;
             // 
             // buttonSettings
             // 
