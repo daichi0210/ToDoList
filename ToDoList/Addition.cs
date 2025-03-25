@@ -19,8 +19,23 @@ namespace ToDoList
 
         private void buttonRegistration_Click(object sender, EventArgs e)
         {
-            Task t = new Task();
+            // 未入力・未選択チェック
+            CheckMissingEntries cme = new CheckMissingEntries();
+            if (cme.NoInput(textBoxTaskName.Text, "タスク名"))
+            {
+                return;
+            }
+            if (cme.NoChoice(comboBoxCategory.Text, "カテゴリ"))
+            {
+                return;
+            }
+            if (cme.NoChoice(comboBoxPriority.Text, "優先度"))
+            {
+                return;
+            }
 
+            // 値を代入
+            Task t = new Task();
             t.TaskName = textBoxTaskName.Text;          // タスク名
             t.Category = comboBoxCategory.Text;         // カテゴリ
             t.Deadline = dateTimePickerDeadline.Text;   // 期限
