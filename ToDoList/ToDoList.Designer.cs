@@ -31,13 +31,14 @@
             buttonAddition = new Button();
             dataGridViewTaskList = new DataGridView();
             buttonSettings = new Button();
+            buttonDelete = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTaskList).BeginInit();
             SuspendLayout();
             // 
             // buttonAddition
             // 
-            buttonAddition.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            buttonAddition.Location = new Point(632, 415);
+            buttonAddition.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonAddition.Location = new Point(12, 415);
             buttonAddition.Name = "buttonAddition";
             buttonAddition.Size = new Size(75, 23);
             buttonAddition.TabIndex = 0;
@@ -66,11 +67,23 @@
             buttonSettings.UseVisualStyleBackColor = true;
             buttonSettings.Click += buttonSettings_Click;
             // 
+            // buttonDelete
+            // 
+            buttonDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonDelete.Location = new Point(93, 415);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(75, 23);
+            buttonDelete.TabIndex = 2;
+            buttonDelete.Text = "削除";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
+            // 
             // ToDoList
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(buttonDelete);
             Controls.Add(dataGridViewTaskList);
             Controls.Add(buttonSettings);
             Controls.Add(buttonAddition);
@@ -86,5 +99,6 @@
         private Button buttonAddition;
         private DataGridView dataGridViewTaskList;
         private Button buttonSettings;
+        private Button buttonDelete;
     }
 }

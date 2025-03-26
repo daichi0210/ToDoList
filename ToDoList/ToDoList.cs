@@ -42,7 +42,7 @@ namespace ToDoList
                 t.ScheduledExecutionDate = selectedRow.Cells["ScheduledExecutionDate"].Value.ToString();    // 実行予定日
                 t.ScheduledExecutionTime = selectedRow.Cells["ScheduledExecutionTime"].Value.ToString();    // 実行予定時刻
                 t.Remarks = selectedRow.Cells["Remarks"].Value.ToString();      // 備考
-                
+
                 // データベースを更新
                 SQLiteTaskList stl = new SQLiteTaskList();
                 stl.Update(targetId, t);
@@ -118,6 +118,41 @@ namespace ToDoList
             DataGridViewColumn sortColumn = dataGridViewTaskList.Columns[5];
             ListSortDirection sortDirection = ListSortDirection.Ascending;
             dataGridViewTaskList.Sort(sortColumn, sortDirection);
+        }
+
+        private void buttonDelete_Click(object sender, EventArgs e)
+        {
+            int targetIndex = -1;
+
+            // 選択されている行を取得
+            targetIndex = dataGridViewTaskList.CurrentCell.RowIndex;
+
+            //★初期状態で一行目が選択されているので不要？
+            if (targetIndex == -1)
+            {
+                // 削除の確認メッセージ
+                MessageBox.Show("削除するデータを選択してください。");
+            }
+            //★すべてのデータを削除することができない…。
+            else
+            {
+                // 選択されている行のIDの値を取得
+                DataGridViewRow selectedRow = dataGridViewTaskList.Rows[targetIndex];
+                var idValue = selectedRow.Cells["Id"].Value;
+                int targetId = Int32.Parse(idValue.ToString());
+
+                // 削除の確認メッセージ
+                DialogResult result = MessageBox.Show("選択されたデータを削除しますか？", "", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    // データを削除
+                    SQLiteTaskList stl = new SQLiteTaskList();
+                    stl.Delete(targetId);
+                }
+
+                // 使用者一覧情報を読み込む
+                LoadTaskList();
+            }
         }
     }
 }

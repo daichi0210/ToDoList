@@ -39,14 +39,14 @@
             listBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
             listBox1.Location = new Point(0, 0);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(120, 450);
+            listBox1.Size = new Size(120, 398);
             listBox1.TabIndex = 2;
             // 
             // Settings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(509, 398);
             Controls.Add(listBox1);
             Name = "Settings";
             StartPosition = FormStartPosition.CenterParent;
