@@ -114,6 +114,15 @@ namespace ToDoList
             // Idの列を非表示
             dataGridViewTaskList.Columns["Id"].Visible = false;
 
+            // 列の幅を自動調停
+            dataGridViewTaskList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            // 『タスク』列の最小幅を指定
+            dataGridViewTaskList.Columns["TaskName"].MinimumWidth = 200;
+
+            // 『備考』列を自動調整
+            dataGridViewTaskList.Columns["Remarks"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
             // 行を並び替える
             DataGridViewColumn sortColumn = dataGridViewTaskList.Columns[5];
             ListSortDirection sortDirection = ListSortDirection.Ascending;

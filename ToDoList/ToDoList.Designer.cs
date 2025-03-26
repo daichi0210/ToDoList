@@ -48,10 +48,12 @@
             // 
             // dataGridViewTaskList
             // 
+            dataGridViewTaskList.AllowUserToAddRows = false;
             dataGridViewTaskList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewTaskList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewTaskList.Location = new Point(12, 12);
             dataGridViewTaskList.Name = "dataGridViewTaskList";
+            dataGridViewTaskList.RowHeadersVisible = false;
             dataGridViewTaskList.Size = new Size(776, 397);
             dataGridViewTaskList.TabIndex = 1;
             dataGridViewTaskList.CellValueChanged += dataGridViewTaskList_CellValueChanged;
