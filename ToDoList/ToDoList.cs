@@ -25,7 +25,7 @@ namespace ToDoList
 
         private void dataGridViewTaskList_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if (dataGridViewStatus)
+/*            if (dataGridViewStatus)
             {
                 // 選択されている行のIDの値を取得
                 int targetIndex = dataGridViewTaskList.CurrentCell.RowIndex;
@@ -47,7 +47,7 @@ namespace ToDoList
                 SQLiteTaskList stl = new SQLiteTaskList();
                 stl.Update(targetId, t);
             }
-        }
+*/        }
 
         private void buttonAddition_Click(object sender, EventArgs e)
         {
@@ -114,16 +114,13 @@ namespace ToDoList
             // 列ヘッダーを中央揃えに変更
             dataGridViewTaskList.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-            // Idの列を非表示
-            dataGridViewTaskList.Columns["Id"].Visible = false;
-
             // 列の幅を自動調整
             dataGridViewTaskList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-            // 『タスク』列の最小幅を指定
+            // 列の最小幅を指定
             dataGridViewTaskList.Columns["TaskName"].MinimumWidth = 200;
 
-            // 『備考』列を自動調整
+            // 列を自動調整
             dataGridViewTaskList.Columns["Remarks"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
             // セルの値を中央揃えに変更
@@ -132,6 +129,32 @@ namespace ToDoList
             dataGridViewTaskList.Columns["Deadline"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewTaskList.Columns["scheduledExecutionDate"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewTaskList.Columns["scheduledExecutionTime"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
+            // 表示形式を変更
+            for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
+            {
+                string dl = dataGridViewTaskList.Rows[i].Cells["Deadline"].Value.ToString();
+                DateTime dt = DateTime.Parse(dl);
+                string date = dt.ToString("MM月dd日");
+                dataGridViewTaskList.Rows[i].Cells["Deadline"].Value = date;
+            }
+            for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
+            {
+                string dl = dataGridViewTaskList.Rows[i].Cells["scheduledExecutionDate"].Value.ToString();
+                DateTime dt = DateTime.Parse(dl);
+                string date = dt.ToString("MM月dd日");
+                dataGridViewTaskList.Rows[i].Cells["scheduledExecutionDate"].Value = date;
+            }
+            for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
+            {
+                string dl = dataGridViewTaskList.Rows[i].Cells["scheduledExecutionTime"].Value.ToString();
+                DateTime dt = DateTime.Parse(dl);
+                string date = dt.ToString("HH:mm");
+                dataGridViewTaskList.Rows[i].Cells["scheduledExecutionTime"].Value = date;
+            }
+
+            // Idの列を非表示
+            dataGridViewTaskList.Columns["Id"].Visible = false;
 
             // 行を並び替える
             DataGridViewColumn sortColumn = dataGridViewTaskList.Columns[5];
