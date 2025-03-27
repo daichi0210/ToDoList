@@ -35,13 +35,13 @@ namespace ToDoList
 
                 // 編集した行の値を代入
                 Task t = new Task();
-                t.TaskName = selectedRow.Cells["TaskName"].Value.ToString();    // タスク名
                 t.Category = selectedRow.Cells["Category"].Value.ToString();    // カテゴリ
+                t.TaskName = selectedRow.Cells["TaskName"].Value.ToString();    // タスク名
+                t.Remarks = selectedRow.Cells["Remarks"].Value.ToString();      // 備考
                 t.Deadline = selectedRow.Cells["Deadline"].Value.ToString();    // 期限
                 t.Priority = selectedRow.Cells["Priority"].Value.ToString();    // 優先度
                 t.ScheduledExecutionDate = selectedRow.Cells["ScheduledExecutionDate"].Value.ToString();    // 実行予定日
                 t.ScheduledExecutionTime = selectedRow.Cells["ScheduledExecutionTime"].Value.ToString();    // 実行予定時刻
-                t.Remarks = selectedRow.Cells["Remarks"].Value.ToString();      // 備考
 
                 // データベースを更新
                 SQLiteTaskList stl = new SQLiteTaskList();
@@ -77,14 +77,17 @@ namespace ToDoList
                 {
                     case "Id":
                         break;
-                    case "TaskName":
-                        cellValue = "タスク名";
-                        break;
                     case "Category":
                         cellValue = "カテゴリ";
                         break;
+                    case "TaskName":
+                        cellValue = "タスク名";
+                        break;
                     case "Deadline":
                         cellValue = "期限";
+                        break;
+                    case "Remarks":
+                        cellValue = "備考";
                         break;
                     case "Priority":
                         cellValue = "優先度";
@@ -94,9 +97,6 @@ namespace ToDoList
                         break;
                     case "ScheduledExecutionTime":
                         cellValue = "実行予定時刻";
-                        break;
-                    case "Remarks":
-                        cellValue = "備考";
                         break;
                     default:
                         cellValue = "";
@@ -111,10 +111,13 @@ namespace ToDoList
                 columnCount++;
             }
 
+            // 列ヘッダーを中央揃えに変更
+            dataGridViewTaskList.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+
             // Idの列を非表示
             dataGridViewTaskList.Columns["Id"].Visible = false;
 
-            // 列の幅を自動調停
+            // 列の幅を自動調整
             dataGridViewTaskList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
             // 『タスク』列の最小幅を指定
@@ -122,6 +125,13 @@ namespace ToDoList
 
             // 『備考』列を自動調整
             dataGridViewTaskList.Columns["Remarks"].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+
+            // セルの値を中央揃えに変更
+            dataGridViewTaskList.Columns["Category"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewTaskList.Columns["Priority"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewTaskList.Columns["Deadline"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewTaskList.Columns["scheduledExecutionDate"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewTaskList.Columns["scheduledExecutionTime"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // 行を並び替える
             DataGridViewColumn sortColumn = dataGridViewTaskList.Columns[5];

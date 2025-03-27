@@ -11,22 +11,22 @@ namespace ToDoList
     {
         private static Dictionary<string, string> _column = new Dictionary<string, string>()
         {
-            {"TaskName", "TEXT"},               // タスク名
             {"Category", "TEXT"},               // カテゴリ
+            {"TaskName", "TEXT"},               // タスク名
+            {"Remarks", "TEXT"},                // 備考
             {"Deadline", "TEXT"},               // 期限
             {"Priority", "TEXT"},               // 優先度
             {"ScheduledExecutionDate", "TEXT"}, // 実行予定日
             {"ScheduledExecutionTime", "TEXT"}, // 実行予定時刻
-            {"Remarks", "TEXT"},                // 備考
         };
 
-        private string _taskName;               // タスク名
         private string _category;               // カテゴリ
+        private string _taskName;               // タスク名
+        private string _remarks;                // 備考
         private string _deadline;               // 期限
         private string _priority;               // 優先度
         private string _scheduledExecutionDate; // 実行予定日
         private string _scheduledExecutionTime; // 実行予定時刻
-        private string _remarks;                // 備考
 
         public Task()
         {
