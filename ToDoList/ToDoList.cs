@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ToDoList
 {
@@ -20,12 +21,13 @@ namespace ToDoList
 
             LoadTaskList();
 
-            dataGridViewStatus = true;
+            //dataGridViewStatus = true;
         }
 
+        /*
         private void dataGridViewTaskList_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-/*            if (dataGridViewStatus)
+            if (dataGridViewStatus)
             {
                 // 選択されている行のIDの値を取得
                 int targetIndex = dataGridViewTaskList.CurrentCell.RowIndex;
@@ -47,7 +49,8 @@ namespace ToDoList
                 SQLiteTaskList stl = new SQLiteTaskList();
                 stl.Update(targetId, t);
             }
-*/        }
+        }
+        */
 
         private void buttonAddition_Click(object sender, EventArgs e)
         {
@@ -160,6 +163,24 @@ namespace ToDoList
             DataGridViewColumn sortColumn = dataGridViewTaskList.Columns[5];
             ListSortDirection sortDirection = ListSortDirection.Ascending;
             dataGridViewTaskList.Sort(sortColumn, sortDirection);
+
+            // 行の背景色を変更する
+            //★初回読み込み時に反映されない。追加画面から戻ると反映される
+            for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
+            {
+                DateTime now = DateTime.Now;
+
+                // 期限が過ぎた行の色を変更
+                if (now >= DateTime.Parse(dataGridViewTaskList.Rows[i].Cells["Deadline"].Value.ToString()))
+                {
+                    dataGridViewTaskList.Rows[i].DefaultCellStyle.BackColor = Color.Red;
+                }
+                // 実行予定日時が過ぎた行の色を変更
+                else if (now >= DateTime.Parse(dataGridViewTaskList.Rows[i].Cells["scheduledExecutionDate"].Value.ToString()))
+                {
+                    dataGridViewTaskList.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+            }
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
