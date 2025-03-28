@@ -56,6 +56,7 @@
             dataGridViewTaskList.RowHeadersVisible = false;
             dataGridViewTaskList.Size = new Size(776, 397);
             dataGridViewTaskList.TabIndex = 1;
+            dataGridViewTaskList.Sorted += dataGridViewTaskList_Sorted;
             // 
             // buttonSettings
             // 

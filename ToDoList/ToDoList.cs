@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design.Behavior;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace ToDoList
@@ -27,6 +28,12 @@ namespace ToDoList
             //dataGridViewStatus = true;
 
         }
+
+        private void dataGridViewTaskList_Sorted(object sender, EventArgs e)
+        {
+            ChangeBackColor();
+        }
+
 
         /*
         private void dataGridViewTaskList_CellValueChanged(object sender, DataGridViewCellEventArgs e)
@@ -168,6 +175,11 @@ namespace ToDoList
             ListSortDirection sortDirection = ListSortDirection.Ascending;
             dataGridViewTaskList.Sort(sortColumn, sortDirection);
 
+            ChangeBackColor();
+        }
+
+        private void ChangeBackColor()
+        {
             // 行の背景色を変更する
             for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
             {
