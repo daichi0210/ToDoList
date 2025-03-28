@@ -18,10 +18,14 @@ namespace ToDoList
         public ToDoList()
         {
             InitializeComponent();
+        }
 
+        private void ToDoList_Load(object sender, EventArgs e)
+        {
             LoadTaskList();
 
             //dataGridViewStatus = true;
+
         }
 
         /*
@@ -165,7 +169,6 @@ namespace ToDoList
             dataGridViewTaskList.Sort(sortColumn, sortDirection);
 
             // 行の背景色を変更する
-            //★初回読み込み時に反映されない。追加画面から戻ると反映される
             for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
             {
                 DateTime now = DateTime.Now;

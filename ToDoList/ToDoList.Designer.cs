@@ -91,6 +91,7 @@
             Name = "ToDoList";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ToDoList";
+            Load += ToDoList_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewTaskList).EndInit();
             ResumeLayout(false);
         }
