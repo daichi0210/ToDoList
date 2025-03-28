@@ -28,33 +28,71 @@
         /// </summary>
         private void InitializeComponent()
         {
-            listBox1 = new ListBox();
+            textBoxCategory = new TextBox();
+            label1 = new Label();
+            buttonSave = new Button();
+            buttonCancel = new Button();
             SuspendLayout();
             // 
-            // listBox1
+            // textBoxCategory
             // 
-            listBox1.Dock = DockStyle.Left;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Items.AddRange(new object[] { "1", "2", "3", "4", "5", "6", "7", "8", "9" });
-            listBox1.Location = new Point(0, 0);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(120, 398);
-            listBox1.TabIndex = 2;
+            textBoxCategory.Location = new Point(12, 27);
+            textBoxCategory.Name = "textBoxCategory";
+            textBoxCategory.Size = new Size(147, 23);
+            textBoxCategory.TabIndex = 3;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(12, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(42, 15);
+            label1.TabIndex = 4;
+            label1.Text = "カテゴリ";
+            // 
+            // buttonSave
+            // 
+            buttonSave.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonSave.Location = new Point(341, 363);
+            buttonSave.Name = "buttonSave";
+            buttonSave.Size = new Size(75, 23);
+            buttonSave.TabIndex = 5;
+            buttonSave.Text = "保存";
+            buttonSave.UseVisualStyleBackColor = true;
+            buttonSave.Click += buttonSave_Click;
+            // 
+            // buttonCancel
+            // 
+            buttonCancel.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            buttonCancel.Location = new Point(422, 363);
+            buttonCancel.Name = "buttonCancel";
+            buttonCancel.Size = new Size(75, 23);
+            buttonCancel.TabIndex = 6;
+            buttonCancel.Text = "キャンセル";
+            buttonCancel.UseVisualStyleBackColor = true;
+            buttonCancel.Click += buttonCancel_Click;
             // 
             // Settings
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(509, 398);
-            Controls.Add(listBox1);
+            Controls.Add(buttonCancel);
+            Controls.Add(buttonSave);
+            Controls.Add(label1);
+            Controls.Add(textBoxCategory);
             Name = "Settings";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Settings";
+            Load += Settings_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
-        private ListBox listBox1;
+        private TextBox textBoxCategory;
+        private Label label1;
+        private Button buttonSave;
+        private Button buttonCancel;
     }
 }
