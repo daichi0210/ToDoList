@@ -11,16 +11,17 @@ using System.Data.SQLite;
 
 namespace ToDoList
 {
-    class SQLiteTaskList
+    class SQLite
     {
         // データベースのファイル名
         private string _databaseFileName = "TaskList.db";
         // テーブル名
-        private string _tableName = "task_list";
+        //private string _tableName;
         // データベースファイルへの接続文字列
         private string _connection;
 
-        public SQLiteTaskList()
+
+        public SQLite()
         {
             // データベースファイルへの接続文字列を代入
             _connection = "Data Source=" + _databaseFileName + ";Version=3;";
@@ -47,7 +48,8 @@ namespace ToDoList
         }
 
         // テーブルがなければ作成する
-        public void CreateTable()
+        /*
+        public void CreateTable(string query)
         {
             // クエリを作成
             Task t = new Task();
@@ -67,6 +69,7 @@ namespace ToDoList
             // SQL実行
             ExecuteNonQuery(query);
         }
+        */
 
         // データベースに追加する
         public void Insert(Task t)

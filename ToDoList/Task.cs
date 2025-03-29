@@ -9,6 +9,8 @@ namespace ToDoList
 {
     class Task
     {
+        private string _tableName = "task_list";    // データベースのテーブル名
+
         private static Dictionary<string, string> _column = new Dictionary<string, string>()
         {
             {"Category", "TEXT"},               // カテゴリ
@@ -78,6 +80,28 @@ namespace ToDoList
         {
             get { return _remarks; }
             set { _remarks = value; }
+        }
+
+        public string CreateTableQuery()
+        {
+            // クエリを作成
+            //Task t = new Task();
+            string query = "CREATE TABLE IF NOT EXISTS " + _tableName + "(";
+            query += "Id INTEGER PRIMARY KEY, ";
+            //foreach (var v in t.Column.Select((Entry, Index) => new {
+            foreach (var v in this.Column.Select((Entry, Index) => new {Entry, Index}))
+            {
+                query += v.Entry.Key + " " + v.Entry.Value;
+
+                //if ((t.Column.Count - 1) - v.Index != 0)
+                if ((this.Column.Count - 1) - v.Index != 0)
+                {
+                    query += ", ";
+                }
+            }
+            query += ")";
+
+            return query;
         }
     }
 }

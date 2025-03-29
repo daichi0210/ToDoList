@@ -79,7 +79,7 @@ namespace ToDoList
 
         public void LoadTaskList()
         {
-            SQLiteTaskList stl = new SQLiteTaskList();
+            SQLite stl = new SQLite();
             dataGridViewTaskList.DataSource = stl.LoadTable();
 
             // 列ヘッダーの文字列を変更する
@@ -224,7 +224,7 @@ namespace ToDoList
                 if (result == DialogResult.Yes)
                 {
                     // データを削除
-                    SQLiteTaskList stl = new SQLiteTaskList();
+                    SQLite stl = new SQLite();
                     stl.Delete(targetId);
                 }
 
