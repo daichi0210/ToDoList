@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -82,7 +83,7 @@ namespace ToDoList
             set { _remarks = value; }
         }
 
-        public string CreateTableQuery()
+        public void SQLiteCreateTable()
         {
             // クエリを作成
             //Task t = new Task();
@@ -101,7 +102,40 @@ namespace ToDoList
             }
             query += ")";
 
-            return query;
+            SQLite sql = new SQLite();
+            sql.ExecuteNonQuery(query);
+        }
+
+        public void SQLiteInsertQuery()
+        {
+            // クエリを作成
+            string query = "INSERT INTO " + _tableName + "(";
+            foreach (var v in this.Column.Select((Entry, Index) => new { Entry, Index }))
+            {
+                query += v.Entry.Key;
+
+                if ((this.Column.Count - 1) - v.Index != 0)
+                {
+                    query += ", ";
+                }
+            }
+            query += ") VALUES (";
+            foreach (var v in this.Column.Select((Entry, Index) => new { Entry, Index }))
+            {
+                PropertyInfo pi = typeof(Task).GetProperty(v.Entry.Key);
+                object value = pi.GetValue(this);
+                query += "'" + value + "'";
+
+                if ((this.Column.Count - 1) - v.Index != 0)
+                {
+                    query += ", ";
+                }
+            }
+            query += ")";
+
+            SQLiteCreateTable();
+            SQLite sql = new SQLite();
+            sql.ExecuteNonQuery(query);
         }
     }
 }

@@ -72,6 +72,7 @@ namespace ToDoList
         */
 
         // データベースに追加する
+        /*
         public void Insert(Task t)
         {
             // クエリを作成
@@ -102,6 +103,7 @@ namespace ToDoList
             // SQL実行
             ExecuteNonQuery(query);
         }
+        */
 
         // データベースを更新する
         public void Update(int targetId, Task t)

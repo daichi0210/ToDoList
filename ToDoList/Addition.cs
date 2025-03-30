@@ -43,10 +43,13 @@ namespace ToDoList
             t.ScheduledExecutionDate = dateTimePickerScheduledExecutionDate.Text;   // 実行予定日
             t.ScheduledExecutionTime = dateTimePickerScheduledExecutionTime.Text;   // 実行予定時刻
             t.Remarks = textBoxRemarks.Text;            // 備考
-            
+
+            t.SQLiteInsertQuery();
+            /*
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(t.CreateTableQuery());
-            sql.Insert(query);
+            sql.ExecuteNonQuery(t.InsertQuery());
+            */
 
             this.Close();
         }
