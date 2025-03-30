@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Reflection;
 using System.Text;
@@ -106,7 +107,7 @@ namespace ToDoList
             sql.ExecuteNonQuery(query);
         }
 
-        public void SQLiteInsertQuery()
+        public void SQLiteInsert()
         {
             // クエリを作成
             string query = "INSERT INTO " + _tableName + "(";
@@ -137,5 +138,55 @@ namespace ToDoList
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(query);
         }
+
+        public void SQLiteUpdate(int targetId)
+        {
+            // クエリを作成
+            string query = "UPDATE " + _tableName + " SET ";
+            foreach (var v in this.Column.Select((Entry, Index) => new { Entry, Index }))
+            {
+                query += v.Entry.Key + " = ";
+
+                PropertyInfo pi = typeof(Task).GetProperty(v.Entry.Key);
+                object value = pi.GetValue(this);
+                query += "'" + value + "'";
+
+                if ((this.Column.Count - 1) - v.Index != 0)
+                {
+                    query += ", ";
+                }
+            }
+            query += " WHERE ID = " + targetId.ToString();
+
+            // SQL実行
+            SQLite sql = new SQLite();
+            sql.ExecuteNonQuery(query);
+        }
+
+        public void SQLiteDelete(int targetId)
+        {
+            // クエリを作成
+            string query = "DELETE FROM " + _tableName + " WHERE ID = " + targetId.ToString();
+
+            // SQL実行
+            SQLite sql = new SQLite();
+            sql.ExecuteNonQuery(query);
+        }
+
+        public DataTable SQLiteLoadTable()
+        {
+            // テーブルがなければ作成する
+            this.SQLiteCreateTable();
+
+            // クエリを作成
+            string query = "SELECT * FROM " + _tableName;
+
+            // SQL実行
+            SQLite sql = new SQLite();
+            DataTable dt = sql.AdapterFill(query);
+
+            return dt;
+        }
+
     }
 }

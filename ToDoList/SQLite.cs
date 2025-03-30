@@ -105,6 +105,7 @@ namespace ToDoList
         }
         */
 
+        /*
         // データベースを更新する
         public void Update(int targetId, Task t)
         {
@@ -128,7 +129,9 @@ namespace ToDoList
             // SQL実行
             ExecuteNonQuery(query);
         }
+        */
 
+        /*
         // データベースから削除する
         public void Delete(int targetId)
         {
@@ -138,6 +141,7 @@ namespace ToDoList
             // SQL実行
             ExecuteNonQuery(query);
         }
+        */
 
         // DataTableにデータを挿入するクエリを実行する
         public DataTable AdapterFill(string query)
@@ -166,6 +170,7 @@ namespace ToDoList
             return dt;
         }
 
+        /*
         // データベースのテーブルを読み込む
         public DataTable LoadTable()
         {
@@ -180,7 +185,7 @@ namespace ToDoList
 
             return dt;
         }
-
+        /*
 
         // 指定したIdのデータを取得する
         /*

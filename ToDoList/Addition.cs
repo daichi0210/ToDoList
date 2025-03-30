@@ -44,7 +44,7 @@ namespace ToDoList
             t.ScheduledExecutionTime = dateTimePickerScheduledExecutionTime.Text;   // 実行予定時刻
             t.Remarks = textBoxRemarks.Text;            // 備考
 
-            t.SQLiteInsertQuery();
+            t.SQLiteInsert();
             /*
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(t.CreateTableQuery());
