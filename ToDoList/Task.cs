@@ -84,18 +84,15 @@ namespace ToDoList
             set { _remarks = value; }
         }
 
+        // テーブルがない場合、作成
         public void SQLiteCreateTable()
         {
             // クエリを作成
-            //Task t = new Task();
             string query = "CREATE TABLE IF NOT EXISTS " + _tableName + "(";
             query += "Id INTEGER PRIMARY KEY, ";
-            //foreach (var v in t.Column.Select((Entry, Index) => new {
             foreach (var v in this.Column.Select((Entry, Index) => new {Entry, Index}))
             {
                 query += v.Entry.Key + " " + v.Entry.Value;
-
-                //if ((t.Column.Count - 1) - v.Index != 0)
                 if ((this.Column.Count - 1) - v.Index != 0)
                 {
                     query += ", ";
@@ -103,10 +100,12 @@ namespace ToDoList
             }
             query += ")";
 
+            // クエリを実行
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(query);
         }
 
+        // テーブルにデータを追加
         public void SQLiteInsert()
         {
             // クエリを作成
@@ -114,7 +113,6 @@ namespace ToDoList
             foreach (var v in this.Column.Select((Entry, Index) => new { Entry, Index }))
             {
                 query += v.Entry.Key;
-
                 if ((this.Column.Count - 1) - v.Index != 0)
                 {
                     query += ", ";
@@ -126,7 +124,6 @@ namespace ToDoList
                 PropertyInfo pi = typeof(Task).GetProperty(v.Entry.Key);
                 object value = pi.GetValue(this);
                 query += "'" + value + "'";
-
                 if ((this.Column.Count - 1) - v.Index != 0)
                 {
                     query += ", ";
@@ -134,11 +131,15 @@ namespace ToDoList
             }
             query += ")";
 
+            // テーブルがない場合、作成
             SQLiteCreateTable();
+
+            // クエリを実行
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(query);
         }
 
+        // テーブルのデータを更新
         public void SQLiteUpdate(int targetId)
         {
             // クエリを作成
@@ -146,11 +147,9 @@ namespace ToDoList
             foreach (var v in this.Column.Select((Entry, Index) => new { Entry, Index }))
             {
                 query += v.Entry.Key + " = ";
-
                 PropertyInfo pi = typeof(Task).GetProperty(v.Entry.Key);
                 object value = pi.GetValue(this);
                 query += "'" + value + "'";
-
                 if ((this.Column.Count - 1) - v.Index != 0)
                 {
                     query += ", ";
@@ -158,21 +157,23 @@ namespace ToDoList
             }
             query += " WHERE ID = " + targetId.ToString();
 
-            // SQL実行
+            // クエリを実行
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(query);
         }
 
+        // テーブルのデータを削除
         public void SQLiteDelete(int targetId)
         {
             // クエリを作成
             string query = "DELETE FROM " + _tableName + " WHERE ID = " + targetId.ToString();
 
-            // SQL実行
+            // クエリを実行
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(query);
         }
 
+        // テーブルのデータを全て取得
         public DataTable SQLiteLoadTable()
         {
             // テーブルがなければ作成する
@@ -181,12 +182,14 @@ namespace ToDoList
             // クエリを作成
             string query = "SELECT * FROM " + _tableName;
 
-            // SQL実行
+            // テーブルがない場合、作成
+            SQLiteCreateTable();
+
+            // クエリを実行
             SQLite sql = new SQLite();
             DataTable dt = sql.AdapterFill(query);
 
             return dt;
         }
-
     }
 }

@@ -82,9 +82,6 @@ namespace ToDoList
             Task t = new Task();
             dataGridViewTaskList.DataSource = t.SQLiteLoadTable();
 
-            //SQLite stl = new SQLite();
-            //dataGridViewTaskList.DataSource = stl.LoadTable();
-
             // 列ヘッダーの文字列を変更する
             int columnCount = 0;
             string cellValue = "";
@@ -226,12 +223,6 @@ namespace ToDoList
                 DialogResult result = MessageBox.Show("選択されたデータを削除しますか？", "", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
-                    // データを削除
-                    /*
-                    SQLite stl = new SQLite();
-                    stl.Delete(targetId);
-                    */
-
                     Task t = new Task();
                     t.SQLiteDelete(targetId);
                 }
