@@ -26,7 +26,6 @@ namespace ToDoList
             LoadTaskList();
 
             //dataGridViewStatus = true;
-
         }
 
         private void dataGridViewTaskList_Sorted(object sender, EventArgs e)

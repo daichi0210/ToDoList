@@ -108,6 +108,9 @@ namespace ToDoList
         // テーブルにデータを追加
         public void SQLiteInsert()
         {
+            // テーブルがない場合、作成
+            SQLiteCreateTable();
+
             // クエリを作成
             string query = "INSERT INTO " + _tableName + "(";
             foreach (var v in this.Column.Select((Entry, Index) => new { Entry, Index }))
@@ -130,9 +133,6 @@ namespace ToDoList
                 }
             }
             query += ")";
-
-            // テーブルがない場合、作成
-            SQLiteCreateTable();
 
             // クエリを実行
             SQLite sql = new SQLite();
@@ -176,14 +176,11 @@ namespace ToDoList
         // テーブルのデータを全て取得
         public DataTable SQLiteLoadTable()
         {
-            // テーブルがなければ作成する
-            this.SQLiteCreateTable();
+            // テーブルがない場合、作成
+            SQLiteCreateTable();
 
             // クエリを作成
             string query = "SELECT * FROM " + _tableName;
-
-            // テーブルがない場合、作成
-            SQLiteCreateTable();
 
             // クエリを実行
             SQLite sql = new SQLite();

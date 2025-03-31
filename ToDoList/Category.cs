@@ -12,6 +12,7 @@ namespace ToDoList
     class Category
     {
         private string _tableName = "category_list";    // データベースのテーブル名
+        private string _columnName = "CategoryName";    // カラム名
 
         private static Dictionary<string, string> _column = new Dictionary<string, string>()
         {
@@ -64,8 +65,29 @@ namespace ToDoList
         }
 
         // テーブルにデータを追加
-        public void SQLiteInsert()
+        public void SQLiteInsert(string words)
         {
+            // テーブルがない場合、作成
+            SQLiteCreateTable();
+            
+            // テーブルのデータをすべて削除
+            SQLiteDeleteTable();
+
+            // クエリを作成
+            string[] wordList = words.Replace("\r\n", "\n").Split(new[]{ '\n', '\r' });
+            foreach (string w in wordList)
+            {
+                string query = "INSERT INTO " + _tableName + "(" + _columnName + ") VALUES(";
+                query += "'" + w + "')";
+                //MessageBox.Show(w);
+                //MessageBox.Show(query);
+
+                // クエリを実行
+                SQLite sql = new SQLite();
+                sql.ExecuteNonQuery(query);
+            }
+
+            /*
             // クエリを作成
             string query = "INSERT INTO " + _tableName + "(";
             foreach (var v in this.Column.Select((Entry, Index) => new { Entry, Index }))
@@ -89,14 +111,13 @@ namespace ToDoList
             }
             query += ")";
 
-            // テーブルがない場合、作成
-            SQLiteCreateTable();
-
             // クエリを実行
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(query);
+            */
         }
 
+        /*
         // テーブルのデータを更新
         public void SQLiteUpdate(int targetId)
         {
@@ -119,7 +140,9 @@ namespace ToDoList
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(query);
         }
+        */
 
+        /*
         // テーブルのデータを削除
         public void SQLiteDelete(int targetId)
         {
@@ -130,7 +153,48 @@ namespace ToDoList
             SQLite sql = new SQLite();
             sql.ExecuteNonQuery(query);
         }
+        */
 
+        // テーブルのデータを全て削除
+        public void SQLiteDeleteTable()
+        {
+            // クエリを作成
+            string query = "DELETE FROM " + _tableName;
+
+            // クエリを実行
+            SQLite sql = new SQLite();
+            sql.ExecuteNonQuery(query);
+        }
+
+        // テーブルのデータを全て取得
+        public string SQLiteLoadTable()
+        {
+            // テーブルがなければ作成する
+            SQLiteCreateTable();
+
+            // クエリを作成
+            string query = "SELECT " + _columnName +" FROM " + _tableName;
+
+            // クエリを実行
+            SQLite sql = new SQLite();
+            DataTable dt = sql.AdapterFill(query);
+
+            string data = "";
+            int count = 0;
+            foreach (DataRow dr in dt.Rows)
+            {
+                data += dr[_columnName];
+                if ((dt.Rows.Count - 1) - count != 0)
+                {
+                    data += ",";
+                }
+                count++;
+            }
+
+            return data;
+        }
+
+        /*
         // テーブルのデータを全て取得
         public DataTable SQLiteLoadTable()
         {
@@ -149,5 +213,6 @@ namespace ToDoList
 
             return dt;
         }
+        */
     }
 }
