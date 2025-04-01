@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +16,15 @@ namespace ToDoList
         public Addition()
         {
             InitializeComponent();
+
+            // コンボボックスにカテゴリ名を追加
+            Category c = new Category();
+            string words = c.SQLiteLoadTable();
+            string[] wordList = words.Split(",");
+            foreach (string w in wordList)
+            {
+                comboBoxCategory.Items.Add(w);
+            }
         }
 
         private void buttonRegistration_Click(object sender, EventArgs e)

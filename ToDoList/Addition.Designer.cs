@@ -83,7 +83,6 @@
             // comboBoxCategory
             // 
             comboBoxCategory.FormattingEnabled = true;
-            comboBoxCategory.Items.AddRange(new object[] { "公民館", "教育事業", "外出", "研修", "市民憲章", "自治連", "まちづくり", "駐連協", "安推協" });
             comboBoxCategory.Location = new Point(97, 41);
             comboBoxCategory.Name = "comboBoxCategory";
             comboBoxCategory.Size = new Size(90, 23);
