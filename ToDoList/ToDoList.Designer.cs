@@ -32,6 +32,7 @@
             dataGridViewTaskList = new DataGridView();
             buttonSettings = new Button();
             buttonDelete = new Button();
+            buttonEdit = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridViewTaskList).BeginInit();
             SuspendLayout();
             // 
@@ -72,13 +73,24 @@
             // buttonDelete
             // 
             buttonDelete.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            buttonDelete.Location = new Point(93, 415);
+            buttonDelete.Location = new Point(174, 415);
             buttonDelete.Name = "buttonDelete";
             buttonDelete.Size = new Size(75, 23);
             buttonDelete.TabIndex = 2;
             buttonDelete.Text = "削除";
             buttonDelete.UseVisualStyleBackColor = true;
             buttonDelete.Click += buttonDelete_Click;
+            // 
+            // buttonEdit
+            // 
+            buttonEdit.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
+            buttonEdit.Location = new Point(93, 415);
+            buttonEdit.Name = "buttonEdit";
+            buttonEdit.Size = new Size(75, 23);
+            buttonEdit.TabIndex = 0;
+            buttonEdit.Text = "編集";
+            buttonEdit.UseVisualStyleBackColor = true;
+            buttonEdit.Click += buttonEdit_Click;
             // 
             // ToDoList
             // 
@@ -88,6 +100,7 @@
             Controls.Add(buttonDelete);
             Controls.Add(dataGridViewTaskList);
             Controls.Add(buttonSettings);
+            Controls.Add(buttonEdit);
             Controls.Add(buttonAddition);
             Name = "ToDoList";
             StartPosition = FormStartPosition.CenterScreen;
@@ -103,5 +116,6 @@
         private DataGridView dataGridViewTaskList;
         private Button buttonSettings;
         private Button buttonDelete;
+        private Button buttonEdit;
     }
 }

@@ -188,5 +188,18 @@ namespace ToDoList
 
             return dt;
         }
+
+        // 指定したIdのデータを取得する
+        public DataTable getSingleData(int targetId)
+        {
+            // クエリを作成
+            string query = "SELECT * FROM " + _tableName + " WHERE ID = " + targetId.ToString();
+
+            // クエリを実行
+            SQLite sql = new SQLite();
+            DataTable dt = sql.AdapterFill(query);
+
+            return dt;
+        }
     }
 }

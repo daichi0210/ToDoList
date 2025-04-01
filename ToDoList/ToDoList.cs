@@ -70,6 +70,21 @@ namespace ToDoList
             LoadTaskList();
         }
 
+        private void buttonEdit_Click(object sender, EventArgs e)
+        {
+            // 選択されている行のIDの値を取得
+            int targetIndex = dataGridViewTaskList.CurrentCell.RowIndex;
+            DataGridViewRow selectedRow = dataGridViewTaskList.Rows[targetIndex];
+            var idValue = selectedRow.Cells["Id"].Value;
+            int targetId = Int32.Parse(idValue.ToString());
+
+            Addition a = new Addition();
+            a.EditTargetId = targetId;
+            a.ShowDialog();
+
+            LoadTaskList();
+        }
+
         private void buttonSettings_Click(object sender, EventArgs e)
         {
             Settings s = new Settings();

@@ -82,6 +82,7 @@
             // 
             // comboBoxCategory
             // 
+            comboBoxCategory.DropDownStyle = ComboBoxStyle.DropDownList;
             comboBoxCategory.FormattingEnabled = true;
             comboBoxCategory.Location = new Point(97, 41);
             comboBoxCategory.Name = "comboBoxCategory";
@@ -207,6 +208,7 @@
             Name = "Addition";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Addition";
+            Load += Addition_Load;
             ResumeLayout(false);
             PerformLayout();
         }
