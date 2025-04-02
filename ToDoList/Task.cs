@@ -20,8 +20,6 @@ namespace ToDoList
             {"Remarks", "TEXT"},                // 備考
             {"Deadline", "TEXT"},               // 期限
             {"Priority", "TEXT"},               // 優先度
-            {"ScheduledExecutionDate", "TEXT"}, // 実行予定日
-            {"ScheduledExecutionTime", "TEXT"}, // 実行予定時刻
         };
 
         private string _category;               // カテゴリ
@@ -29,8 +27,6 @@ namespace ToDoList
         private string _remarks;                // 備考
         private string _deadline;               // 期限
         private string _priority;               // 優先度
-        private string _scheduledExecutionDate; // 実行予定日
-        private string _scheduledExecutionTime; // 実行予定時刻
 
         public Task()
         {
@@ -67,16 +63,6 @@ namespace ToDoList
         {
             get { return _priority; }
             set { _priority = value; }
-        }
-        public string ScheduledExecutionDate
-        {
-            get { return _scheduledExecutionDate; }
-            set { _scheduledExecutionDate = value; }
-        }
-        public string ScheduledExecutionTime
-        {
-            get { return _scheduledExecutionTime; }
-            set { _scheduledExecutionTime = value; }
         }
         public string Remarks
         {

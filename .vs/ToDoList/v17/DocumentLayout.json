@@ -11,7 +11,7 @@
       "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\addition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|d:\\dev\\windows\\src\\repos\\todolist\\todolist\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|D:\\dev\\windows\\src\\repos\\ToDoList\\todolist\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{91AE56DD-8C15-415B-AC93-7907899232DF}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\todolist.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -58,7 +58,7 @@
               "RelativeDocumentMoniker": "ToDoList\\Task.cs",
               "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Task.cs",
               "RelativeToolTip": "ToDoList\\Task.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAWwMAAAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAADQAAAAAAAAAAAArwEIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-01T12:05:16.376Z",
               "EditorCaption": ""
@@ -83,7 +83,7 @@
               "RelativeDocumentMoniker": "ToDoList\\Addition.cs",
               "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\Addition.cs",
               "RelativeToolTip": "ToDoList\\Addition.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAUwGEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAEwFQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-29T13:30:38.514Z",
               "EditorCaption": ""
@@ -96,7 +96,7 @@
               "RelativeDocumentMoniker": "ToDoList\\ToDoList.cs",
               "ToolTip": "D:\\dev\\windows\\src\\repos\\ToDoList\\ToDoList\\ToDoList.cs",
               "RelativeToolTip": "ToDoList\\ToDoList.cs",
-              "ViewState": "AgIAAM0AAAAAAAAAAAAjwNUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAKkAAAAAAAAAAADgv7oAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T12:26:45.741Z",
               "EditorCaption": ""

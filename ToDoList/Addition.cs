@@ -52,8 +52,6 @@ namespace ToDoList
                 comboBoxCategory.Text = dt.Rows[0]["Category"].ToString();      // カテゴリ
                 dateTimePickerDeadline.Text = dt.Rows[0]["Deadline"].ToString();// 期限
                 comboBoxPriority.Text = dt.Rows[0]["Priority"].ToString();      // 優先度
-                dateTimePickerScheduledExecutionDate.Text = dt.Rows[0]["ScheduledExecutionDate"].ToString();    // 実行予定日
-                dateTimePickerScheduledExecutionTime.Text = dt.Rows[0]["ScheduledExecutionTime"].ToString();    // 実行予定時刻
                 textBoxRemarks.Text = dt.Rows[0]["Remarks"].ToString();         // 備考
 
                 // 登録ボタンの Text を変更
@@ -84,8 +82,6 @@ namespace ToDoList
             t.Category = comboBoxCategory.Text;         // カテゴリ
             t.Deadline = dateTimePickerDeadline.Text;   // 期限
             t.Priority = comboBoxPriority.Text;         // 優先度
-            t.ScheduledExecutionDate = dateTimePickerScheduledExecutionDate.Text;   // 実行予定日
-            t.ScheduledExecutionTime = dateTimePickerScheduledExecutionTime.Text;   // 実行予定時刻
             t.Remarks = textBoxRemarks.Text;            // 備考
 
             // _editTargetId が -1 以外の場合、編集対象のデータを更新する

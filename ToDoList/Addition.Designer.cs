@@ -38,12 +38,8 @@
             buttonCancel = new Button();
             textBoxRemarks = new TextBox();
             dateTimePickerDeadline = new DateTimePicker();
-            label4 = new Label();
-            dateTimePickerScheduledExecutionDate = new DateTimePicker();
             label9 = new Label();
             comboBoxPriority = new ComboBox();
-            dateTimePickerScheduledExecutionTime = new DateTimePicker();
-            label6 = new Label();
             SuspendLayout();
             // 
             // label1
@@ -92,7 +88,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 189);
+            label5.Location = new Point(12, 131);
             label5.Name = "label5";
             label5.Size = new Size(31, 15);
             label5.TabIndex = 0;
@@ -100,7 +96,7 @@
             // 
             // buttonRegistration
             // 
-            buttonRegistration.Location = new Point(97, 215);
+            buttonRegistration.Location = new Point(97, 157);
             buttonRegistration.Name = "buttonRegistration";
             buttonRegistration.Size = new Size(75, 23);
             buttonRegistration.TabIndex = 10;
@@ -110,7 +106,7 @@
             // 
             // buttonCancel
             // 
-            buttonCancel.Location = new Point(192, 215);
+            buttonCancel.Location = new Point(192, 157);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(75, 23);
             buttonCancel.TabIndex = 11;
@@ -120,7 +116,7 @@
             // 
             // textBoxRemarks
             // 
-            textBoxRemarks.Location = new Point(97, 186);
+            textBoxRemarks.Location = new Point(97, 128);
             textBoxRemarks.Name = "textBoxRemarks";
             textBoxRemarks.Size = new Size(170, 23);
             textBoxRemarks.TabIndex = 9;
@@ -131,22 +127,6 @@
             dateTimePickerDeadline.Name = "dateTimePickerDeadline";
             dateTimePickerDeadline.Size = new Size(121, 23);
             dateTimePickerDeadline.TabIndex = 3;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(12, 134);
-            label4.Name = "label4";
-            label4.Size = new Size(67, 15);
-            label4.TabIndex = 0;
-            label4.Text = "実行予定日";
-            // 
-            // dateTimePickerScheduledExecutionDate
-            // 
-            dateTimePickerScheduledExecutionDate.Location = new Point(97, 128);
-            dateTimePickerScheduledExecutionDate.Name = "dateTimePickerScheduledExecutionDate";
-            dateTimePickerScheduledExecutionDate.Size = new Size(121, 23);
-            dateTimePickerScheduledExecutionDate.TabIndex = 5;
             // 
             // label9
             // 
@@ -167,30 +147,11 @@
             comboBoxPriority.Size = new Size(50, 23);
             comboBoxPriority.TabIndex = 4;
             // 
-            // dateTimePickerScheduledExecutionTime
-            // 
-            dateTimePickerScheduledExecutionTime.Format = DateTimePickerFormat.Time;
-            dateTimePickerScheduledExecutionTime.Location = new Point(97, 157);
-            dateTimePickerScheduledExecutionTime.Name = "dateTimePickerScheduledExecutionTime";
-            dateTimePickerScheduledExecutionTime.Size = new Size(90, 23);
-            dateTimePickerScheduledExecutionTime.TabIndex = 7;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(12, 163);
-            label6.Name = "label6";
-            label6.Size = new Size(79, 15);
-            label6.TabIndex = 0;
-            label6.Text = "実行予定時刻";
-            // 
             // Addition
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(279, 251);
-            Controls.Add(dateTimePickerScheduledExecutionTime);
-            Controls.Add(dateTimePickerScheduledExecutionDate);
+            ClientSize = new Size(279, 191);
             Controls.Add(dateTimePickerDeadline);
             Controls.Add(buttonCancel);
             Controls.Add(buttonRegistration);
@@ -199,8 +160,6 @@
             Controls.Add(textBoxRemarks);
             Controls.Add(textBoxTaskName);
             Controls.Add(label5);
-            Controls.Add(label4);
-            Controls.Add(label6);
             Controls.Add(label3);
             Controls.Add(label9);
             Controls.Add(label2);
@@ -225,11 +184,7 @@
         private Button buttonCancel;
         private TextBox textBoxRemarks;
         private DateTimePicker dateTimePickerDeadline;
-        private Label label4;
-        private DateTimePicker dateTimePickerScheduledExecutionDate;
         private Label label9;
         private ComboBox comboBoxPriority;
-        private DateTimePicker dateTimePickerScheduledExecutionTime;
-        private Label label6;
     }
 }

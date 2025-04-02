@@ -52,8 +52,6 @@ namespace ToDoList
                 t.Remarks = selectedRow.Cells["Remarks"].Value.ToString();      // 備考
                 t.Deadline = selectedRow.Cells["Deadline"].Value.ToString();    // 期限
                 t.Priority = selectedRow.Cells["Priority"].Value.ToString();    // 優先度
-                t.ScheduledExecutionDate = selectedRow.Cells["ScheduledExecutionDate"].Value.ToString();    // 実行予定日
-                t.ScheduledExecutionTime = selectedRow.Cells["ScheduledExecutionTime"].Value.ToString();    // 実行予定時刻
 
                 // データベースを更新
                 SQLiteTaskList stl = new SQLiteTaskList();
@@ -120,12 +118,6 @@ namespace ToDoList
                     case "Priority":
                         cellValue = "優先度";
                         break;
-                    case "ScheduledExecutionDate":
-                        cellValue = "実行予定日";
-                        break;
-                    case "ScheduledExecutionTime":
-                        cellValue = "実行予定時刻";
-                        break;
                     default:
                         cellValue = "";
                         break;
@@ -155,8 +147,6 @@ namespace ToDoList
             dataGridViewTaskList.Columns["Category"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewTaskList.Columns["Priority"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewTaskList.Columns["Deadline"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewTaskList.Columns["scheduledExecutionDate"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewTaskList.Columns["scheduledExecutionTime"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
             // 表示形式を変更
             for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
@@ -165,20 +155,6 @@ namespace ToDoList
                 DateTime dt = DateTime.Parse(dl);
                 string date = dt.ToString("MM月dd日");
                 dataGridViewTaskList.Rows[i].Cells["Deadline"].Value = date;
-            }
-            for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
-            {
-                string dl = dataGridViewTaskList.Rows[i].Cells["scheduledExecutionDate"].Value.ToString();
-                DateTime dt = DateTime.Parse(dl);
-                string date = dt.ToString("MM月dd日");
-                dataGridViewTaskList.Rows[i].Cells["scheduledExecutionDate"].Value = date;
-            }
-            for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
-            {
-                string dl = dataGridViewTaskList.Rows[i].Cells["scheduledExecutionTime"].Value.ToString();
-                DateTime dt = DateTime.Parse(dl);
-                string date = dt.ToString("HH:mm");
-                dataGridViewTaskList.Rows[i].Cells["scheduledExecutionTime"].Value = date;
             }
 
             // Idの列を非表示
@@ -200,14 +176,13 @@ namespace ToDoList
                 DateTime now = DateTime.Now;
 
                 // 期限が過ぎた行の色を変更
-                if (now >= DateTime.Parse(dataGridViewTaskList.Rows[i].Cells["Deadline"].Value.ToString()))
-                {
-                    dataGridViewTaskList.Rows[i].DefaultCellStyle.BackColor = Color.Red;
-                }
-                // 実行予定日時が過ぎた行の色を変更
-                else if (now >= DateTime.Parse(dataGridViewTaskList.Rows[i].Cells["scheduledExecutionDate"].Value.ToString()))
+                if (now == DateTime.Parse(dataGridViewTaskList.Rows[i].Cells["Deadline"].Value.ToString()))
                 {
                     dataGridViewTaskList.Rows[i].DefaultCellStyle.BackColor = Color.Yellow;
+                }
+                else if (now > DateTime.Parse(dataGridViewTaskList.Rows[i].Cells["Deadline"].Value.ToString()))
+                {
+                    dataGridViewTaskList.Rows[i].DefaultCellStyle.BackColor = Color.Red;
                 }
             }
         }
