@@ -76,6 +76,10 @@ namespace ToDoList
                 return;
             }
 
+            // 期限の時刻を削除
+            DateTime date = DateTime.Parse(dateTimePickerDeadline.Text);
+            dateTimePickerDeadline.Text = date.ToShortDateString();
+
             // 値を代入
             Task t = new Task();
             t.TaskName = textBoxTaskName.Text;          // タスク名

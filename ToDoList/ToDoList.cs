@@ -173,7 +173,9 @@ namespace ToDoList
             // 行の背景色を変更する
             for (int i = 0; i < dataGridViewTaskList.RowCount; i++)
             {
+                // 期限の時刻を削除
                 DateTime now = DateTime.Now;
+                now = DateTime.Parse(now.ToShortDateString());
 
                 // 期限が過ぎた行の色を変更
                 if (now == DateTime.Parse(dataGridViewTaskList.Rows[i].Cells["Deadline"].Value.ToString()))
