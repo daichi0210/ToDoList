@@ -160,8 +160,8 @@ namespace ToDoList
             // Idの列を非表示
             dataGridViewTaskList.Columns["Id"].Visible = false;
 
-            // 行を並び替える
-            DataGridViewColumn sortColumn = dataGridViewTaskList.Columns[5];
+            // 期限列を並び替え
+            DataGridViewColumn sortColumn = dataGridViewTaskList.Columns[4];
             ListSortDirection sortDirection = ListSortDirection.Ascending;
             dataGridViewTaskList.Sort(sortColumn, sortDirection);
 

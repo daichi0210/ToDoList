@@ -50,14 +50,15 @@
             // dataGridViewTaskList
             // 
             dataGridViewTaskList.AllowUserToAddRows = false;
+            dataGridViewTaskList.AllowUserToResizeRows = false;
             dataGridViewTaskList.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dataGridViewTaskList.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewTaskList.Location = new Point(12, 12);
             dataGridViewTaskList.Name = "dataGridViewTaskList";
             dataGridViewTaskList.RowHeadersVisible = false;
+            dataGridViewTaskList.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewTaskList.Size = new Size(776, 397);
             dataGridViewTaskList.TabIndex = 1;
-            dataGridViewTaskList.Sorted += dataGridViewTaskList_Sorted;
             // 
             // buttonSettings
             // 
@@ -104,7 +105,7 @@
             Controls.Add(buttonAddition);
             Name = "ToDoList";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ToDoList";
+            Text = "ToDoリスト";
             Load += ToDoList_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridViewTaskList).EndInit();
             ResumeLayout(false);

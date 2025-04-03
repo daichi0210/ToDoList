@@ -83,7 +83,7 @@
             Controls.Add(textBoxCategory);
             Name = "Settings";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Settings";
+            Text = "設定";
             Load += Settings_Load;
             ResumeLayout(false);
             PerformLayout();

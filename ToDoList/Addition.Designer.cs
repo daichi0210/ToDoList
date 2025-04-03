@@ -166,7 +166,7 @@
             Controls.Add(label1);
             Name = "Addition";
             StartPosition = FormStartPosition.CenterParent;
-            Text = "Addition";
+            Text = "登録";
             Load += Addition_Load;
             ResumeLayout(false);
             PerformLayout();
