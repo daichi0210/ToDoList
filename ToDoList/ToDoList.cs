@@ -24,41 +24,12 @@ namespace ToDoList
         private void ToDoList_Load(object sender, EventArgs e)
         {
             LoadTaskList();
-
-            //dataGridViewStatus = true;
         }
 
         private void dataGridViewTaskList_Sorted(object sender, EventArgs e)
         {
             ChangeBackColor();
         }
-
-
-        /*
-        private void dataGridViewTaskList_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dataGridViewStatus)
-            {
-                // 選択されている行のIDの値を取得
-                int targetIndex = dataGridViewTaskList.CurrentCell.RowIndex;
-                DataGridViewRow selectedRow = dataGridViewTaskList.Rows[targetIndex];
-                var idValue = selectedRow.Cells["Id"].Value;
-                int targetId = Int32.Parse(idValue.ToString());
-
-                // 編集した行の値を代入
-                Task t = new Task();
-                t.Category = selectedRow.Cells["Category"].Value.ToString();    // カテゴリ
-                t.TaskName = selectedRow.Cells["TaskName"].Value.ToString();    // タスク名
-                t.Remarks = selectedRow.Cells["Remarks"].Value.ToString();      // 備考
-                t.Deadline = selectedRow.Cells["Deadline"].Value.ToString();    // 期限
-                t.Priority = selectedRow.Cells["Priority"].Value.ToString();    // 優先度
-
-                // データベースを更新
-                SQLiteTaskList stl = new SQLiteTaskList();
-                stl.Update(targetId, t);
-            }
-        }
-        */
 
         private void buttonAddition_Click(object sender, EventArgs e)
         {
